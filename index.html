@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+    <script type="text/javascript" src="/assets/javascript/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Crystals Game</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Crystals Collector</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <article class="block">
+                <p1>You will be given a random number at the start of the game.  There are 4 crystals below.  By clicking on a crystal
+                    you will add a specific amount of points to your total score.  You will win the game by matching your
+                    total score to random number, you lose the game if your total score goes above the random number.  The
+                    value of each crystal is hidden from you until you click on it.  Each time when the game starts, the game
+                    will change the values of each crystal.</p1>
+                </article>
+            </div>
+        </div>
+    </div>
+
+   place randomNumber on screen and into variable
+   assign random values to jewels place on screen
+   get input from user as a click on the jewel of choice
+
+on click of jewel add that value to  totalGuess
+   
+    if totalGuess < randomNumber
+        get new guess to add to totalGuess
+        update guessed amount so far
+    if totalGuess > randomNumber
+        you lose
+        add to losses
+    if totalGuess > randomNumber
+        you win
+        add to wins
+
+
+
+
+
+
+
+</body>
+
+</html>
