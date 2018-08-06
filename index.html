@@ -43,42 +43,46 @@
 
                 <div id="empty-div1"></div>
 
-                <script type="text/javascript">
-                    var randomNumber = Math.floor((Math.random() * 101) + 20);
-                    var targetDiv = document.getElementById("empty-div1");
-                    targetDiv.textContent = "number to guess: " + randomNumber;
 
-                    var ruby = Math.floor((Math.random() * 12) + 1);
-                    var diamond = Math.floor((Math.random() * 12) + 1);
-                    var amber = Math.floor((Math.random() * 12) + 1);
-                    var emerald = Math.floor((Math.random() * 12) + 1);
-                </script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="assets/images/blue_crystal.png" alt="Blue crystal">
+            </div>
+            <div class="col-md-2">
+                <img src="assets/images/green_crystal.png" alt="Green crystal">
+            </div>
+            <div class="col-md-2">
+                <img src="assets/images/red_crystal.png" alt="Red crystal">
+            </div>
+            <div class="col-md-2">
+                <img src="assets/images/yellow_crystal.png" alt="Yellow crystal">
             </div>
         </div>
 
 
 
+        <script type="text/javascript">
+            $(document).ready(function () {
 
+                var randomNumber = Math.floor((Math.random() * 101) + 19);
+                var targetDiv = document.getElementById("empty-div1");
+                targetDiv.textContent = "number to guess: " + randomNumber;
 
-
-
-
-
-
-
-
-
-    </div>
-
-
-    place randomNumber on screen and into variable assign random values to jewels place on screen get input from user as a click
-    on the jewel of choice on click of jewel add that value to totalGuess if totalGuess
-    < randomNumber get new guess
-        to add to totalGuess update guessed amount so far if totalGuess> randomNumber you lose add to losses if totalGuess > randomNumber you win add to wins
-
-
+                var ruby = Math.floor((Math.random() * 12) + 1);
+                var diamond = Math.floor((Math.random() * 12) + 1);
+                var amber = Math.floor((Math.random() * 12) + 1);
+                var emerald = Math.floor((Math.random() * 12) + 1);
+            }
+        </script>
 
 
 </body>
+
+place randomNumber on screen and into variable assign random values to jewels place on screen get input from user as a click
+on the jewel of choice on click of jewel add that value to totalGuess if totalGuess randomNumber get new guess to add to
+totalGuess update guessed amount so far if totalGuess randomNumber you lose add to losses if totalGuess > randomNumber you
+win add to wins
 
 </html>
