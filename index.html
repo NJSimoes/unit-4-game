@@ -76,23 +76,37 @@
                 var diamond = Math.floor((Math.random() * 12) + 1);
                 var amber = Math.floor((Math.random() * 12) + 1);
                 var emerald = Math.floor((Math.random() * 12) + 1);
+                var totalScore = 0;
 
                 // Here i create an on-click event that responds to button clicks of the crystal image.
                 $(".blueCrystal").on("click", function () {
+
+                    totalScore = totalScore + diamond
                     // Clicking the button triggers an alert message.
-                    alert("You clicked a blue crystal!");
+                    alert("You clicked a blue crystal! total score is " + totalScore);
                 });
+
                 $(".greenCrystal").on("click", function () {
+
+                    totalScore = totalScore + emerald
                     // Clicking the button triggers an alert message.
-                    alert("You clicked a green crystal!");
+                    alert("You clicked a green crystal! total score is " + totalScore);
+                    // Clicking the button triggers an alert message.
                 });
+                
                 $(".redCrystal").on("click", function () {
+
+                    totalScore = totalScore + ruby
                     // Clicking the button triggers an alert message.
-                    alert("You clicked a red crystal!");
+                    alert("You clicked a red crystal! total score is " + totalScore);
+                    // Clicking the button triggers an alert message.
                 });
                 $(".yellowCrystal").on("click", function () {
+
                     // Clicking the button triggers an alert message.
-                    alert("You clicked a yellow crystal!");
+                    totalScore = totalScore + amber
+                    // Clicking the button triggers an alert message.
+                    alert("You clicked a yellow crystal! total score is " + totalScore);
                 });
 
 
