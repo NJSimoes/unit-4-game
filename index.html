@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -35,63 +36,67 @@
                 </article>
             </div>
         </div>
+        <!-- Here  add a header which will hold the "number-to-guess" -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
 
-        <div class="row">
-            <div class="col-md-4">
-                <div id="empty-div1">
-                    <h2></h2>
+                    <h1>Number to Guess: <span id="number-to-guess"></span>
+                    </h1>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <img class="blueCrystal" src="assets/images/blue_crystal.png" alt="Blue crystal">
+
+
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="blueCrystal" src="assets/images/blue_crystal.png" alt="Blue crystal">
+                </div>
+                <div class="col-md-2">
+                    <img class="greenCrystal" src="assets/images/green_crystal.png" alt="Green crystal">
+                </div>
+                <div class="col-md-2">
+                    <img class="redCrystal" src="assets/images/red_crystal.png" alt="Red crystal">
+                </div>
+                <div class="col-md-2">
+                    <img class="yellowCrystal" src="assets/images/yellow_crystal.png" alt="Yellow crystal">
+                </div>
             </div>
-            <div class="col-md-2">
-                <img class="greenCrystal" src="assets/images/green_crystal.png" alt="Green crystal">
-            </div>
-            <div class="col-md-2">
-                <img class="redCrystal" src="assets/images/red_crystal.png" alt="Red crystal">
-            </div>
-            <div class="col-md-2">
-                <img class="yellowCrystal" src="assets/images/yellow_crystal.png" alt="Yellow crystal">
-            </div>
-        </div>
 
 
+            <script type="text/javascript">
 
+                var randomNumber = Math.floor((Math.random() * 101) + 19);
+                var targetDiv = document.getElementById("empty-div1");
+                
+                // Here set the "number-to-guess" header to match the "randomNumber".
+                // Eventually this will allow us to change the HTML to match the value in the JavaScript.
+                $("#number-to-guess").text(randomNumber);
 
-        <script type="text/javascript">
-
-        var randomNumber = Math.floor((Math.random() * 101) + 19);
-        var targetDiv = document.getElementById("empty-div1");
-        targetDiv.textContent = "number to guess: " + randomNumber;
-
-        var ruby = Math.floor((Math.random() * 12) + 1);
-        var diamond = Math.floor((Math.random() * 12) + 1);
-        var amber = Math.floor((Math.random() * 12) + 1);
-        var emerald = Math.floor((Math.random() * 12) + 1);
+                var ruby = Math.floor((Math.random() * 12) + 1);
+                var diamond = Math.floor((Math.random() * 12) + 1);
+                var amber = Math.floor((Math.random() * 12) + 1);
+                var emerald = Math.floor((Math.random() * 12) + 1);
 
                 // Here i create an on-click event that responds to button clicks of the crystal image.
-                $(".blueCrystal").on("click", function() {
-                // Clicking the button triggers an alert message.
-                alert("You clicked a blue crystal!");
+                $(".blueCrystal").on("click", function () {
+                    // Clicking the button triggers an alert message.
+                    alert("You clicked a blue crystal!");
                 });
-                $(".greenCrystal").on("click", function() {
-                // Clicking the button triggers an alert message.
-                alert("You clicked a green crystal!");
+                $(".greenCrystal").on("click", function () {
+                    // Clicking the button triggers an alert message.
+                    alert("You clicked a green crystal!");
                 });
-                $(".redCrystal").on("click", function() {
-                // Clicking the button triggers an alert message.
-                alert("You clicked a red crystal!");
+                $(".redCrystal").on("click", function () {
+                    // Clicking the button triggers an alert message.
+                    alert("You clicked a red crystal!");
                 });
-                $(".yellowCrystal").on("click", function() {
-                // Clicking the button triggers an alert message.
-                alert("You clicked a yellow crystal!");
+                $(".yellowCrystal").on("click", function () {
+                    // Clicking the button triggers an alert message.
+                    alert("You clicked a yellow crystal!");
                 });
 
-            
-        </script>
+
+            </script>
 
 
 </body>
