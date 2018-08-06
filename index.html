@@ -40,87 +40,108 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+                    <h1>Number to Guess:
+                        <span id="number-to-guess"></span>
+                    </h1>
                 </div>
                 <div class="col-md-4">
-                    <h1>Total Score so far: <span id="total-score"></span></h1>
+                    <h1>Total Score so far:
+                        <span id="total-score"></span>
+                    </h1>
                 </div>
-    
             </div>
-
 
             <div class="row">
                 <div class="col-md-2">
-                    <img class="blueCrystal" src="assets/images/blue_crystal.png" alt="Blue crystal">
+                    <h3>Wins:
+                        <span id="Wins"></span>
+                    </h3>
                 </div>
                 <div class="col-md-2">
-                    <img class="greenCrystal" src="assets/images/green_crystal.png" alt="Green crystal">
-                </div>
-                <div class="col-md-2">
-                    <img class="redCrystal" src="assets/images/red_crystal.png" alt="Red crystal">
-                </div>
-                <div class="col-md-2">
-                    <img class="yellowCrystal" src="assets/images/yellow_crystal.png" alt="Yellow crystal">
+                    <h3>Losses:
+                        <span id="Losses"></span>
+                    </h3>
                 </div>
             </div>
+        </div>
 
 
-            <script type="text/javascript">
-
-                var randomNumber = Math.floor((Math.random() * 101) + 19);
-                var targetDiv = document.getElementById("empty-div1");
-                
-                // Here set the "number-to-guess" header to match the "randomNumber".
-                // Eventually this will allow us to change the HTML to match the value in the JavaScript.
-                $("#number-to-guess").text(randomNumber);
-
-                var ruby = Math.floor((Math.random() * 12) + 1);
-                var diamond = Math.floor((Math.random() * 12) + 1);
-                var amber = Math.floor((Math.random() * 12) + 1);
-                var emerald = Math.floor((Math.random() * 12) + 1);
-                var totalScore = 0;
-
-                // Here i create an on-click event that responds to button clicks of the crystal image.
-                $(".blueCrystal").on("click", function () {
-                    // Clicking the button updates the score.
-                    totalScore = totalScore + diamond
-                    $("#total-score").text(totalScore);
-                });
-
-                $(".greenCrystal").on("click", function () {
-                    totalScore = totalScore + emerald
-                    // Clicking the button updates the score.
-                    $("#total-score").text(totalScore);
-                });
-                
-                $(".redCrystal").on("click", function () {
-                    // Clicking the button updates the score.
-                    totalScore = totalScore + ruby
-                    $("#total-score").text(totalScore);
-                });
-
-                $(".yellowCrystal").on("click", function () {
-                    // Clicking the button updates the score.
-                    totalScore = totalScore + amber
-                    $("#total-score").text(totalScore);
-                });
-
-                if (totalScore > randomNumber){
-
-                }
-                    
-                else if (totalScore == randomNumber){
-
-                }
+        <div class="row">
+            <div class="col-md-2">
+                <img class="blueCrystal" src="assets/images/blue_crystal.png" alt="Blue crystal">
+            </div>
+            <div class="col-md-2">
+                <img class="greenCrystal" src="assets/images/green_crystal.png" alt="Green crystal">
+            </div>
+            <div class="col-md-2">
+                <img class="redCrystal" src="assets/images/red_crystal.png" alt="Red crystal">
+            </div>
+            <div class="col-md-2">
+                <img class="yellowCrystal" src="assets/images/yellow_crystal.png" alt="Yellow crystal">
+            </div>
+        </div>
 
 
-            </script>
+        <script type="text/javascript">
+
+            var randomNumber = Math.floor((Math.random() * 101) + 19);
+            var targetDiv = document.getElementById("empty-div1");
+
+            // Here set the "number-to-guess" header to match the "randomNumber".
+            // Eventually this will allow us to change the HTML to match the value in the JavaScript.
+            $("#number-to-guess").text(randomNumber);
+
+            var ruby = Math.floor((Math.random() * 12) + 1);
+            var diamond = Math.floor((Math.random() * 12) + 1);
+            var amber = Math.floor((Math.random() * 12) + 1);
+            var emerald = Math.floor((Math.random() * 12) + 1);
+            var totalScore = 0;
+            var wins = 0;
+            var losses = 0;
+
+
+            // Here i create an on-click event that responds to button clicks of the crystal image.
+            $(".blueCrystal").on("click", function () {
+                // Clicking the button updates the score.
+                totalScore = totalScore + diamond
+                $("#total-score").text(totalScore);
+            });
+
+            $(".greenCrystal").on("click", function () {
+                totalScore = totalScore + emerald
+                // Clicking the button updates the score.
+                $("#total-score").text(totalScore);
+            });
+
+            $(".redCrystal").on("click", function () {
+                // Clicking the button updates the score.
+                totalScore = totalScore + ruby
+                $("#total-score").text(totalScore);
+            });
+
+            $(".yellowCrystal").on("click", function () {
+                // Clicking the button updates the score.
+                totalScore = totalScore + amber
+                $("#total-score").text(totalScore);
+            });
+
+            if (totalScore > randomNumber) {
+
+            }
+
+            else if (totalScore == randomNumber) {
+
+            }
+            $("#Wins").text(wins);
+            $("#Losses").text(losses);
+
+
+        </script>
 
 
 </body>
 
-if totalGuess randomNumber get new guess to add to
-totalGuess update guessed amount so far if totalGuess randomNumber you lose add to losses if totalGuess > randomNumber you
-win add to wins
+if totalGuess randomNumber get new guess to add to totalGuess update guessed amount so far if totalGuess randomNumber you
+lose add to losses if totalGuess > randomNumber you win add to wins
 
 </html>
