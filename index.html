@@ -7,8 +7,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="/assets/javascript/game.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Crystals Game</title>
 
 </head>
@@ -39,42 +38,59 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h2></h2>
-
-                <div id="empty-div1"></div>
-
-
+                <div id="empty-div1">
+                    <h2></h2>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2">
-                <img src="assets/images/blue_crystal.png" alt="Blue crystal">
+                <img class="blueCrystal" src="assets/images/blue_crystal.png" alt="Blue crystal">
             </div>
             <div class="col-md-2">
-                <img src="assets/images/green_crystal.png" alt="Green crystal">
+                <img class="greenCrystal" src="assets/images/green_crystal.png" alt="Green crystal">
             </div>
             <div class="col-md-2">
-                <img src="assets/images/red_crystal.png" alt="Red crystal">
+                <img class="redCrystal" src="assets/images/red_crystal.png" alt="Red crystal">
             </div>
             <div class="col-md-2">
-                <img src="assets/images/yellow_crystal.png" alt="Yellow crystal">
+                <img class="yellowCrystal" src="assets/images/yellow_crystal.png" alt="Yellow crystal">
             </div>
         </div>
 
 
 
+
         <script type="text/javascript">
-            $(document).ready(function () {
 
-                var randomNumber = Math.floor((Math.random() * 101) + 19);
-                var targetDiv = document.getElementById("empty-div1");
-                targetDiv.textContent = "number to guess: " + randomNumber;
+        var randomNumber = Math.floor((Math.random() * 101) + 19);
+        var targetDiv = document.getElementById("empty-div1");
+        targetDiv.textContent = "number to guess: " + randomNumber;
 
-                var ruby = Math.floor((Math.random() * 12) + 1);
-                var diamond = Math.floor((Math.random() * 12) + 1);
-                var amber = Math.floor((Math.random() * 12) + 1);
-                var emerald = Math.floor((Math.random() * 12) + 1);
-            }
+        var ruby = Math.floor((Math.random() * 12) + 1);
+        var diamond = Math.floor((Math.random() * 12) + 1);
+        var amber = Math.floor((Math.random() * 12) + 1);
+        var emerald = Math.floor((Math.random() * 12) + 1);
+
+                // Here i create an on-click event that responds to button clicks of the crystal image.
+                $(".blueCrystal").on("click", function() {
+                // Clicking the button triggers an alert message.
+                alert("You clicked a blue crystal!");
+                });
+                $(".greenCrystal").on("click", function() {
+                // Clicking the button triggers an alert message.
+                alert("You clicked a green crystal!");
+                });
+                $(".redCrystal").on("click", function() {
+                // Clicking the button triggers an alert message.
+                alert("You clicked a red crystal!");
+                });
+                $(".yellowCrystal").on("click", function() {
+                // Clicking the button triggers an alert message.
+                alert("You clicked a yellow crystal!");
+                });
+
+            
         </script>
 
 
