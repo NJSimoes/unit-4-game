@@ -96,8 +96,11 @@
             var amber = Math.floor((Math.random() * 12) + 1);
             var emerald = Math.floor((Math.random() * 12) + 1);
             var totalScore = 0;
-            var wins = 0;
-            var losses = 0;
+            var wins = 1;
+            var losses = 1;
+
+            $("#Wins").text(wins);
+            $("#Losses").text(losses);
 
 
             // Here i create an on-click event that responds to button clicks of the crystal image.
@@ -105,35 +108,67 @@
                 // Clicking the button updates the score.
                 totalScore = totalScore + diamond
                 $("#total-score").text(totalScore);
+                         
+                $("#Wins").text(wins);
+                checkGame();
+            
             });
 
             $(".greenCrystal").on("click", function () {
                 totalScore = totalScore + emerald
                 // Clicking the button updates the score.
                 $("#total-score").text(totalScore);
+                if (totalScore == randomNumber) {
+                
+                $("#Wins").text(wins);
+            }
             });
 
             $(".redCrystal").on("click", function () {
                 // Clicking the button updates the score.
                 totalScore = totalScore + ruby
                 $("#total-score").text(totalScore);
+                if (totalScore == randomNumber) {
+                
+                $("#Wins").text(wins);
+            }
             });
 
             $(".yellowCrystal").on("click", function () {
                 // Clicking the button updates the score.
                 totalScore = totalScore + amber
                 $("#total-score").text(totalScore);
+                if (totalScore == randomNumber) {
+                
+                $("#Wins").text(wins);
+            }
             });
 
-            if (totalScore > randomNumber) {
+       
 
-            }
-
-            else if (totalScore == randomNumber) {
-
-            }
-            $("#Wins").text(wins);
-            $("#Losses").text(losses);
+function checkGame() {
+    if (totalScore === targetNumber) {
+        Wins++;
+        alert ("You WIN!!");
+        alert("Wins: " + Wins);
+        alert("Losses: " + Loss);
+        alert("New totalScore: " + totalScore + " Target #: " + targetNumber);
+        $("#wins").text(Wins);
+        resetGame();
+    } else if (totalScore > targetNumber) {
+        Loss++;
+        alert("Sorry you lost.");
+        alert("Wins: " + Wins);
+        alert("Losses: " + Loss);
+        alert("New totalScore: " + totalScore + " Target #: " + targetNumber);
+        $("#losses").text(Loss);
+        resetGame();
+    } else {
+        alert("New totalScore: " + totalScore + " Target #: " + targetNumber);
+        $("#target-score").text(targetNumber);
+        $("#total-score").text(totalScore);
+    }
+}
 
 
         </script>
